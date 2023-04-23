@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <script async defer src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1"/>
+  
+  <title>view!</title>
+  <script async defer src="../js/view.js"></script>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dataTables.bootstrap5.min.css">
+  <link rel="stylesheet" href="../css/view.css">
+</head>
+<body>
+    
+<!-- Sidebar -->
+<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:100px">
+  <a href="view.html" class="w3-bar-item w3-button">View</a>
+  <a href="input.html" class="w3-bar-item w3-button">Input</a>
+  <a href="log.html" class="w3-bar-item w3-button">Log</a>
+  <a href="settings.html" class="w3-bar-item w3-button">Settings</a>
+</div>
+
+<!-- Page Content -->
+<div style="margin-left:100px">
+  <div class="w3-container w3-teal" >
+    <div id="view-header" >
+      <h1>View</h1>
+      <a href="./view.html" class="btn btn-warning">Refresh</a>
+      <select id="select-download-format" class="form-select-sm">
+        <optgroup label="ALL">
+          <option selected value="HTML">HTML</option>
+          <option value="EPUB">EPUB</option>
+          <option value="MOBI">MOBI</option>
+        </optgroup>
+        <optgroup label="AO3">
+          <option value="PDF">PDF</option>
+          <option value="AZW3">AZW3</option>
+        </optgroup>
+        <optgroup label="TTH">
+          <option value="TEXT">TEXT</option>
+        </optgroup>
+      </select>
+      <button id="create-wait-window-btn-download" class="btn btn-danger">Download</button>
+      <button id="create-wait-window-btn-data-from-web" class="btn btn-info">Metadata</button>
+      <input type="text" id="search-bar-2" placeholder="Search...">
+      <button id="open-downloads-folder-btn" class="btn btn-primary">Open Downloads Folder</button>
+    </div>
+  </div>
+  <div class="w3-container">
+      <table id="example" class="table table-striped" style="width:100%">
+        <thead>
+            <tr class="w3-teal">
+              <th>select</th>
+              <th>object_id</th>
+              <th>host</th>
+              <th>work_id</th>
+              <th>url</th>
+              <th>metadata</th>
+              <th>unavailable</th>
+              <th>favourite</th>
+              <th>saved</th>
+              <th>entry_date</th>
+              <th>user_tags</th>
+              <th>title</th>
+              <th>series</th>
+              <th>authors</th>
+              <th>summary</th>
+              <th>fandoms</th>
+              <th>tags</th>
+              <th>characters</th>
+              <th>categories</th>
+              <th>relationships</th>
+              <th>warnings</th>
+              <th>status</th>
+              <th>rating</th>
+              <th>language</th>
+              <th>chapters</th>
+              <th>words</th>
+              <th>hits</th>
+              <th>kudos</th>
+              <th>date_edited</th>
+              <th>date_published</th>
+              <th>date_updated</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th>
+              <div class="postition_of_checkbox_control">
+                <input class="form-check-input" type="checkbox"  id="selectall" name="selectall" autocomplete="off" onclick="eventCheckAllBox()">
+              </div>
+            </th>
+            <th class="filterCell">object_id</th>
+            <th class="filterCell">host</th>
+            <th class="filterCell">work_id</th>
+            <th class="filterCell">url</th>
+            <th class="filterCell">metadata</th>
+            <th class="filterCell">unavailable</th>
+            <th class="filterCell">favourite</th>
+            <th class="filterCell">saved</th>
+            <th class="filterCell">entry_date</th>
+            <th class="filterCell">user_tags</th>
+            <th class="filterCell">title</th>
+            <th class="filterCell">series</th>
+            <th class="filterCell">authors</th>
+            <th class="filterCell">summary</th>
+            <th class="filterCell">fandoms</th>
+            <th class="filterCell">tags</th>
+            <th class="filterCell">characters</th>
+            <th class="filterCell">categories</th>
+            <th class="filterCell">relationships</th>
+            <th class="filterCell">warnings</th>
+            <th class="filterCell">status</th>
+            <th class="filterCell">rating</th>
+            <th class="filterCell">language</th>
+            <th class="filterCell">chapters</th>
+            <th class="filterCell">words</th>
+            <th class="filterCell">hits</th>
+            <th class="filterCell">kudos</th>
+            <th class="filterCell">date_edited</th>
+            <th class="filterCell">date_published</th>
+            <th class="filterCell">date_updated</th>
+          </tr>
+      </tfoot>
+    </table>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

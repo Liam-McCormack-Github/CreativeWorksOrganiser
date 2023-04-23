@@ -1,0 +1,18 @@
+.settings-div {
+  overflow: hidden;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.settings-div button {
+  float: right;
+  margin-right: 20px;
+}
+
+.btn.btn-primary {
+  width: 160px; /* replace with your desired width */
+}
+
+.btn.btn-success {
+  width: 120px; /* replace with your desired width */
+}

@@ -1,0 +1,84 @@
+
+.dataTables_filter { 
+	display: none; 
+}
+
+.postition_of_checkbox_control{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+th:nth-child(1) {
+	background-color: #009688;
+    z-index: 3;
+}
+td:nth-child(1) {
+	background-color: #009688;
+}
+
+#view-header {
+    display: block;
+    overflow: hidden;
+    height: 56px;
+  }
+
+  #view-header h1 {
+    margin: 0;
+    float: left;
+  }
+
+  #view-header button, #view-header a {
+    float: right;
+    margin-left: 20px;
+    margin-top: 9px;
+	color: white;
+}
+  #view-header select {
+    float: right;
+    margin-left: 5px;
+    margin-top: 12px;
+}
+
+#view-header input {
+  float: right;
+  width: 300px;
+  margin-left: 20px;
+  margin-top: 13px;
+}
+/*
+table {
+	border: 1px solid black;
+	border-collapse: collapse;
+  }
+
+th, td { 
+	padding: 8px;
+	border: 1px solid #ccc;
+	text-align: left;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 150px;
+}
+
+div.dataTables_wrapper {
+	margin: 0 auto;
+}
+
+
+
+
+
+th input {
+	width: 90%;
+}
+
+th:nth-child(1) {
+	background-color: #009688;
+}
+td:nth-child(1) {
+	background-color: #009688;
+}
+*/
