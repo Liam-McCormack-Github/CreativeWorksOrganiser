@@ -1,7 +1,14 @@
 #  CreativeWorksOrganiser
  Frontend Electron App for Uni Project
 
-#  Open Folder In Terminal...
-1.npm init
-2.npm install
-3.npm start
+#  To setup in editor
+1. Open Folder In Terminal...
+2. npm init
+3. npm install
+
+# To run build
+1. npm start
+2. rs
+
+# To Make Binaries
+1. npm run make
