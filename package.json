@@ -1,5 +1,5 @@
 {
-  "name": "CreativeWorksOrganiser",
+  "name": "creativeworksorganiser",
   "productName": "CreativeWorksOrganiser",
   "version": "1.0.0",
   "description": "My Electron application description",
@@ -13,10 +13,7 @@
     "lint": "echo \"No linting configured\""
   },
   "keywords": [],
-  "author": {
-    "name": "Liam McCormack",
-    "email": "52713206+Liam-McCormack-Github@users.noreply.github.com"
-  },
+  "author": "Liam McCormack <52713206+Liam-McCormack-Github@users.noreply.github.com>",
   "license": "MIT",
   "dependencies": {
     "adm-zip": "^0.5.10",
@@ -39,5 +36,13 @@
     "electron": "22.0.0",
     "electron-packager": "^17.1.1",
     "electron-rebuild": "^3.2.9"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Liam-McCormack-Github/CreativeWorksOrganiser.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Liam-McCormack-Github/CreativeWorksOrganiser/issues"
+  },
+  "homepage": "https://github.com/Liam-McCormack-Github/CreativeWorksOrganiser#readme"
 }

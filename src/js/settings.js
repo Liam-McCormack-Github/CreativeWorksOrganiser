@@ -64,12 +64,12 @@ async function asyncMain() {
     });
     
     openAppReleasesBtn.addEventListener('click', function() {
-      url = 'https://www.github.com/Liam-McCormack-Github/CreativeWorksOrganiserScripts';
+      url = 'https://www.github.com/Liam-McCormack-Github/CreativeWorksOrganiser';
       ipcRenderer.send('open-link-in-browser', { url });
     });
     
     openAppRepoBtn.addEventListener('click', function() {
-      url = 'https://www.github.com/Liam-McCormack-Github/CreativeWorksOrganiserScripts';
+      url = 'https://www.github.com/Liam-McCormack-Github/CreativeWorksOrganiser/releases';
       ipcRenderer.send('open-link-in-browser', { url });
     });
 
