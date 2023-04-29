@@ -13,6 +13,25 @@
   width: 160px; /* replace with your desired width */
 }
 
+
+.btn.btn-danger {
+  width: 160px; /* replace with your desired width */
+}
+
 .btn.btn-success {
   width: 120px; /* replace with your desired width */
 }
+
+.credentials-input {
+  float: right;
+  margin-right: 20px;
+  height: 38px;
+}
+
+#select-credentials {
+  float: right;
+  margin-right: 20px;
+  width: 160px;
+  height: 38px;
+}
+

@@ -4,7 +4,6 @@ const { EventEmitter } = require('events');
 const { ipcRenderer } = require('electron');
 const datatables = require( 'datatables.net-dt' )();
 const datatables_fixedcolumns = require( 'datatables.net-fixedcolumns' )( window, $ );
-// const datatables_editor = require( 'datatables.net-editor' )( window, $ );
 const fs = require('fs');
 const path = require('path');
 const { addListener } = require('process');

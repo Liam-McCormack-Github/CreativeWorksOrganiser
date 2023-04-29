@@ -26,11 +26,29 @@
     <h1>Settings</h1>
   </div>
   <div class="w3-container">
+    <h1 class="settings-div">Links</h1>
     <div class="settings-div" id="settings-div-0">Git repo containing Python Scripts<button id="download-scripts-btn" class="btn btn-primary">Download Scripts</button><button id="open-scripts-repo-btn" class="btn btn-success">View Repo</button> </div>
     <div class="settings-div" id="settings-div-1">Git repo containing Application Code<button id="download-app-btn" class="btn btn-primary">Download App</button><button id="open-app-repo-btn" class="btn btn-success">View Repo</button> </div>
     <div class="settings-div" id="settings-div-2"></div>
     <div class="settings-div" id="settings-div-3"></div>
     <div class="settings-div" id="settings-div-4"></div>
+    <br/>
+    <h1 class="settings-div">AO3 Login</h1>
+    <div class="settings-div" id="settings-div-5">Selected Login
+      <button id="remove-login-from-db" class="btn btn-danger">Remove Login</button>
+      <select id="select-credentials" class="form-select-sm">
+        <!--
+        <option value="Username1">Username 1</option>
+        <option value="Username2">Username 2</option>
+        <option value="Username3">Username 3</option>
+        -->
+      </select>      
+    </div>
+    <div class="settings-div" id="settings-div-6">Add Login     
+      <button id="add-login-to-db" class="btn btn-primary">Add Login</button>
+      <input class="credentials-input" type="text" id="input-password" placeholder="Password...">
+      <input class="credentials-input" type="text" id="input-username" placeholder="Username...">
+    </div>
   </div>
 </div>
 
