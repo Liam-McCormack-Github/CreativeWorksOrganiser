@@ -26,7 +26,7 @@ function getGlobalVariables() {
 function startRedirect() {
   setTimeout(function() {
     location.href = "./html/log.html";
-  }, 1000);
+  }, 10);
 }
 
 
