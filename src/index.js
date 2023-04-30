@@ -111,7 +111,7 @@ const exitAndShow = (msg)  => {
   app.quit();
 }
 
-// Check if a file exist/accessable on this system (Not using Async!)
+// Check if a file exists/accessable on this system (Not using Async!)
 const doesFileExist = (filePath) => {
   try {
     fs.accessSync(filePath);
@@ -167,7 +167,7 @@ switch (process.platform) {
     }
     // Set Path to Python Venv
     pathToPythonVENV = path.join(newPath_AppStorage, 'python_environment_win32', 'Scripts', 'pythonw.exe'); 
-    // Check if Python Venv exist, if it does not, create one.
+    // Check if Python Venv exists, if it does not, create one.
     if (!doesFileExist(pathToPythonVENV)) {
       createPythonVenv_win32(pathToPythonVENV);
     }
@@ -187,7 +187,7 @@ switch (process.platform) {
     }
     // Set Path to Python Venv
     pathToPythonVENV = path.join(newPath_AppStorage, 'python_environment_macos', 'Scripts', 'pythonw.exe'); 
-    // Check if Python Venv exist, if it does not, create one.
+    // Check if Python Venv exists, if it does not, create one.
     if (!doesFileExist(pathToPythonVENV)) {
       createPythonVenv_darwin(pathToPythonVENV);
     } 
@@ -207,7 +207,7 @@ switch (process.platform) {
     }
     // Set Path to Python Venv
     pathToPythonVENV = path.join(newPath_AppStorage, 'python_environment_linux', 'Scripts', 'pythonw.exe'); 
-    // Check if Python Venv exist, if it does not, create one.
+    // Check if Python Venv exists, if it does not, create one.
     if (!doesFileExist(pathToPythonVENV)) {
       createPythonVenv_linux(pathToPythonVENV);
     }
@@ -284,7 +284,6 @@ ipcMain.on('get-global-vals', (event) => {
 
 // Download Python scripts from my github
 ipcMain.on('download-git-repo', (event) => {
-  console.log("test");
   var fileUrl = "https://github.com/Liam-McCormack-Github/CreativeWorksOrganiserScripts/archive/refs/heads/main.zip";
   var filePath = path.join(newPath_Data, 'Temp');
   download(fileUrl,filePath).then(() => { 
