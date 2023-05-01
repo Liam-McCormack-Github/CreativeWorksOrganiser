@@ -125,27 +125,27 @@ const doesFileExist = (filePath) => {
 
 // Create Python Venv for each supported platform
 function createPythonVenv_linux(venvPath) {
-  const venvScriptsDir = path.dirname(venvPath);                                                              console.log(venvScriptsDir);        
-  const venvBaseDir = path.dirname(venvScriptsDir);                                                           console.log(venvBaseDir);
-  const requirements = path.join(__dirname, 'requirements.txt');                                              console.log(requirements);
-  const outCreateVenv = execSync(`python3 -m venv "${venvBaseDir}"`).toString();                              console.log(outCreateVenv);
-  const outPipInstall = execSync(`pip3 --timeout=60 install -r "${requirements}"`, { cwd: venvScriptsDir}).toString();     console.log(outPipInstall);
+  const venvScriptsDir = path.dirname(venvPath);                                                                           console.log(venvScriptsDir);        
+  const venvBaseDir = path.dirname(venvScriptsDir);                                                                        console.log(venvBaseDir);
+  const requirements = path.join(__dirname, 'requirements.txt');                                                           console.log(requirements);
+  const outCreateVenv = execSync(`python3 -m venv "${venvBaseDir}"`).toString();                                           console.log(outCreateVenv);
+  const outPipInstall = execSync(`pip3 install -r "${requirements}"`, { cwd: venvScriptsDir}).toString();     console.log(outPipInstall);
 }
 
 function createPythonVenv_darwin(venvPath) {
-  const venvScriptsDir = path.dirname(venvPath);                                                              console.log(venvScriptsDir);        
-  const venvBaseDir = path.dirname(venvScriptsDir);                                                           console.log(venvBaseDir);
-  const requirements = path.join(__dirname, 'requirements.txt');                                              console.log(requirements);
-  const outCreateVenv = execSync(`python3 -m venv "${venvBaseDir}"`).toString();                              console.log(outCreateVenv);
-  const outPipInstall = execSync(`pip3 --timeout=60 install -r "${requirements}"`, { cwd: venvScriptsDir}).toString();     console.log(outPipInstall);
+  const venvScriptsDir = path.dirname(venvPath);                                                                           console.log(venvScriptsDir);        
+  const venvBaseDir = path.dirname(venvScriptsDir);                                                                        console.log(venvBaseDir);
+  const requirements = path.join(__dirname, 'requirements.txt');                                                           console.log(requirements);
+  const outCreateVenv = execSync(`python3 -m venv "${venvBaseDir}"`).toString();                                           console.log(outCreateVenv);
+  const outPipInstall = execSync(`pip3 install -r "${requirements} --use-pep517"`, { cwd: venvScriptsDir}).toString();     console.log(outPipInstall);
 }
 
 function createPythonVenv_win32(venvPath) {
-  const venvScriptsDir = path.dirname(venvPath);                                                              console.log(venvScriptsDir);        
-  const venvBaseDir = path.dirname(venvScriptsDir);                                                           console.log(venvBaseDir);
-  const requirements = path.join(__dirname, 'requirements.txt');                                              console.log(requirements);
-  const outCreateVenv = execSync(`python -m venv "${venvBaseDir}"`).toString();                               console.log(outCreateVenv);
-  const outPipInstall = execSync(`pip --timeout=60 install -r "${requirements}"`, { cwd: venvScriptsDir}).toString();      console.log(outPipInstall);
+  const venvScriptsDir = path.dirname(venvPath);                                                                           console.log(venvScriptsDir);        
+  const venvBaseDir = path.dirname(venvScriptsDir);                                                                        console.log(venvBaseDir);
+  const requirements = path.join(__dirname, 'requirements.txt');                                                           console.log(requirements);
+  const outCreateVenv = execSync(`python -m venv "${venvBaseDir}"`).toString();                                            console.log(outCreateVenv);
+  const outPipInstall = execSync(`pip install -r "${requirements}"`, { cwd: venvScriptsDir}).toString();      console.log(outPipInstall);
 }
 
 // Init global var
@@ -186,7 +186,7 @@ switch (process.platform) {
       console.error(error); exitAndShow("No Python Installed At All");
     }
     // Set Path to Python Venv
-    pathToPythonVENV = path.join(newPath_AppStorage, 'python_environment_macos', 'Scripts', 'pythonw.exe'); 
+    pathToPythonVENV = path.join(newPath_AppStorage, 'python_environment_macos', 'bin', 'python3.11'); 
     // Check if Python Venv exists, if it does not, create one.
     if (!doesFileExist(pathToPythonVENV)) {
       createPythonVenv_darwin(pathToPythonVENV);
@@ -206,7 +206,7 @@ switch (process.platform) {
       console.error(error); exitAndShow("No Python Installed At All");
     }
     // Set Path to Python Venv
-    pathToPythonVENV = path.join(newPath_AppStorage, 'python_environment_linux', 'Scripts', 'pythonw.exe'); 
+    pathToPythonVENV = path.join(newPath_AppStorage, 'python_environment_linux', 'bin', 'python3.11'); 
     // Check if Python Venv exists, if it does not, create one.
     if (!doesFileExist(pathToPythonVENV)) {
       createPythonVenv_linux(pathToPythonVENV);
